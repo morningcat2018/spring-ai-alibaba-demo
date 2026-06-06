@@ -36,6 +36,7 @@ public class HelloController {
     @GetMapping(value = "/hello/dochat")
     public String doChat(@RequestParam(name = "question", defaultValue = "你是谁") String question) {
         String result = chatModel.call(question);
+        System.out.println(chatModel.getDefaultOptions().getModel());
         return result;
     }
 

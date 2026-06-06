@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>ai1-demo</module>
+        <module>ai6-auto-memory</module>
     </modules>
 
     <properties>
