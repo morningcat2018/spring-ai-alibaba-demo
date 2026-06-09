@@ -9,6 +9,7 @@
     <modules>
         <module>ai1-demo</module>
         <module>ai6-auto-memory</module>
+        <module>ai10-rag</module>
     </modules>
 
     <properties>
