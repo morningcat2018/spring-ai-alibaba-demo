@@ -16,7 +16,7 @@ public class RagController {
     @Autowired
     private RetrievalAugmentationAdvisor retrievalAugmentationAdvisor;
 
-//    http://localhost:8090/chat?message=到最后罗兰如何应对神造之神的威胁的
+//    http://localhost:8090/chat?message=罗兰
     @GetMapping("/chat")
     public Flux<String> chat(@RequestParam(value = "message") String message) {
         Flux<String> resp = chatClient.prompt()
@@ -25,7 +25,7 @@ public class RagController {
                 .stream()
                 .content();
 
-        return resp.doOnNext(item -> System.out.println("发送: " + item));
+        return resp.doOnNext(item -> System.out.print(item));
     }
 }
 
