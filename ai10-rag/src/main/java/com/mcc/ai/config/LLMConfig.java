@@ -37,8 +37,8 @@ public class LLMConfig {
     private String collectionName;
 
     @Bean
-    public ChatClient chatClient(ChatModel dashscopeChatModel) {
-        return ChatClient.builder(dashscopeChatModel).build();
+    public ChatClient chatClient(ChatModel chatModel) {
+        return ChatClient.builder(chatModel).build();
     }
 
 

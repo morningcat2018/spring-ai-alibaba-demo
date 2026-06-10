@@ -21,7 +21,7 @@ public class LLMConfig {
     }
 
     @Bean
-    public ChatClient chatClient(@Qualifier("dashscopeChatModel") ChatModel chatModel, ChatMemory memory) {
+    public ChatClient chatClient(@Qualifier("dashScopeChatModel") ChatModel chatModel, ChatMemory memory) {
         ChatClient client = ChatClient.builder(chatModel)
                 .defaultAdvisors(MessageChatMemoryAdvisor.builder(memory).build())
                 .build();

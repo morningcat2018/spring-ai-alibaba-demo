@@ -44,7 +44,7 @@ public class LLMConfig {
     }
 
     @Bean
-    public ChatClient chatClient(@Qualifier("dashscopeChatModel")ChatModel dashscopeChatModel){
-        return ChatClient.builder(dashscopeChatModel).build();
+    public ChatClient chatClient(@Qualifier("dashScopeChatModel")ChatModel dashScopeChatModel){
+        return ChatClient.builder(dashScopeChatModel).build();
     }
 }

@@ -26,7 +26,7 @@ public class HelloController {
      * 对话模型，调用阿里云百炼平台
      * ChatModel 所有大模型聊天的总的父接口,支持文本聊天交互模型*/
     @Autowired
-    @Qualifier("dashscopeChatModel")
+    @Qualifier("deepseek")
     private ChatModel chatModel;
 
     @Autowired
