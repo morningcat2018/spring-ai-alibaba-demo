@@ -16,7 +16,7 @@ public class RagController {
     @Autowired
     private RetrievalAugmentationAdvisor retrievalAugmentationAdvisor;
 
-//    http://localhost:8090/chat?message=罗兰
+//    http://localhost:8090/chat?message=神造之神的危机如何解除的
     @GetMapping("/chat")
     public Flux<String> chat(@RequestParam(value = "message") String message) {
         Flux<String> resp = chatClient.prompt()

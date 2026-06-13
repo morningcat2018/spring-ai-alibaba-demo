@@ -47,12 +47,12 @@ public class LLMConfig {
 
         VectorStoreDocumentRetriever retriver = VectorStoreDocumentRetriever.builder()
                 .vectorStore(vectorStore)
-                .similarityThreshold(0.2)
-                .topK(6)
+                .similarityThreshold(0.5)
+                .topK(15)
                 .build();
 
         ContextualQueryAugmenter cqa = ContextualQueryAugmenter.builder()
-                .allowEmptyContext(true)
+                .allowEmptyContext(false)
                 .build();
 
         return RetrievalAugmentationAdvisor.builder()
@@ -103,8 +103,8 @@ public class LLMConfig {
         //拆分文档，写入向量数据库
         //使用TokenTextSplitter 拆分文本
         TokenTextSplitter splitter = TokenTextSplitter.builder()
-                .withChunkSize(800)
-                .withMinChunkSizeChars(400)
+                .withChunkSize(1800)
+                .withMinChunkSizeChars(800)
                 .withKeepSeparator(true)
                 .build();
 
